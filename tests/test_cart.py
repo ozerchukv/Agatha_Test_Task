@@ -10,7 +10,7 @@ def test_add_to_cart(login):
     inventory_page.go_to_cart()
 
     cart_page = CartPage(login)
-    assert cart_page.is_item_in_cart(), "Item was not added to the cart."
+    assert cart_page.is_item_in_cart()
 
 
 def test_remove_from_cart(login):
@@ -21,7 +21,7 @@ def test_remove_from_cart(login):
 
     cart_page = CartPage(login)
     cart_page.remove_item()
-    assert not cart_page.is_item_in_cart(), "Item was not removed from the cart."
+    assert not cart_page.is_item_in_cart()
 
 
 def test_proceed_to_checkout(login):
@@ -33,7 +33,7 @@ def test_proceed_to_checkout(login):
     cart_page = CartPage(login)
     cart_page.proceed_to_checkout()
 
-    assert cart_page.is_checkout_page_displayed(), "Checkout page was not displayed."
+    assert cart_page.is_checkout_page_displayed()
 
 
 def test_logout(login):
@@ -41,4 +41,4 @@ def test_logout(login):
     inventory_page = InventoryPage(login)
     inventory_page.logout()
 
-    assert "saucedemo.com" in login.current_url, "Logout failed."
+    assert "saucedemo.com" in login.current_url

@@ -8,7 +8,7 @@ def test_login_invalid_password(driver):
     login_page.login("standard_user", "wrong_password")
 
     expected_error = "Epic sadface: Username and password do not match any user in this service"
-    assert login_page.get_error_message() == expected_error, "Error message did not match expected."
+    assert login_page.get_error_message() == expected_error
 
 
 def test_login_invalid_username(driver):
@@ -18,7 +18,7 @@ def test_login_invalid_username(driver):
     login_page.login("wrong_user", "secret_sauce")
 
     expected_error = "Epic sadface: Username and password do not match any user in this service"
-    assert login_page.get_error_message() == expected_error, "Error message did not match expected."
+    assert login_page.get_error_message() == expected_error
 
 
 def test_login_empty_fields(driver):
@@ -28,4 +28,4 @@ def test_login_empty_fields(driver):
     login_page.login("", "")
 
     expected_error = "Epic sadface: Username is required"
-    assert login_page.get_error_message() == expected_error, "Error message did not match expected."
+    assert login_page.get_error_message() == expected_error
