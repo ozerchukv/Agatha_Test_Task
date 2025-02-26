@@ -14,7 +14,7 @@ def driver():
     driver = webdriver.Chrome(service=service)
     driver.implicitly_wait(5)
     yield driver
-    time.sleep(3)  # Wait 3 seconds before closing to see tests execution on UI
+    time.sleep(4)  # Wait 4 seconds before closing to see tests execution on UI
     driver.quit()
 
 
