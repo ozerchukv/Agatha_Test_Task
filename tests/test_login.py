@@ -8,7 +8,7 @@ def test_login_successful(login):
     assert "inventory.html" in login.current_url
 
 
-@pytest.mark.negative  # command to run only negative tests -> pytest -m positive
+@pytest.mark.negative  # command to run only negative tests -> pytest -m negative
 def test_login_invalid_password(driver):
     """Try logging in with a valid username but an incorrect password."""
     driver.get("https://www.saucedemo.com/")
