@@ -1,0 +1,32 @@
+
+TEST CASES
+
+1.	"Successful Login"
+- Verify that a user can log in with valid credentials (standard_user)
+
+I've implemented a successful login using the "Login" fixture.
+So that it can then be used in other tests and so that there is no duplication of code.
+The fixture is in the conftest.py
+
+
+2.	"Login with Invalid Password"
+- Verify that login fails when using a correct username but an incorrect password
+
+
+3.	"Login with Invalid Username"
+- Verify that login fails when using a non-existent username with a correct password
+
+4.	"Login with Empty Fields"
+- Verify that login fails when the username and password fields are left empty
+
+5.	"Add Item to Cart"
+- Verify that a user can successfully add an item to the cart
+
+6.	"Remove Item from Cart"
+- Verify that a user can remove an item from the cart
+
+7.	"Proceed to Checkout"
+- Verify that a user can proceed to the checkout page after adding an item to the cart"
+
+8.	"Logout from the System"
+- Verify that a logged-in user can successfully log out"
